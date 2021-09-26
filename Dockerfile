@@ -1,4 +1,4 @@
-FROM traefik:2.3
+FROM traefik:2.5
 
 LABEL maintainer="Sergii Sadovyi <s.sadovyi@deepvision.team>"
 

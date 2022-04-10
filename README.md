@@ -2,7 +2,7 @@
 
 ## Versions
 
-* `2.3` – Current version
+* `2.6` – Current version
 
 ## Usage
 
@@ -27,7 +27,7 @@ services:
       CONTAINERS: "1"
 
   traefik:
-    image: docker.pkg.github.com/deeepvision/docker-traefik-proxy/traefik-proxy:2.1
+    image: docker.pkg.github.com/deeepvision/docker-traefik-proxy/traefik-proxy:2.6
     restart: always
     ports:
       - 80:80

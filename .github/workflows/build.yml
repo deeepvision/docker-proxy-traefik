@@ -3,15 +3,18 @@ name: Publish Docker Image
 on:
   push:
     branches:
-      - release/**
+      - v*
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: deeepvision/github-action-docker-build@master
+        name: Code Checkout
+      - uses: docker://ghcr.io/deeepvision/github-action-docker-build/docker-build:1.1
+        name: Build Docker Image
         with:
           name: traefik-proxy
+          registryType: ghcr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
